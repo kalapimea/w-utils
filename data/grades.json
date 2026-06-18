@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "class_name": "chemistry",
+        "grade": "9",
+        "date": "2026-06-18"
+    },
+    {
+        "class_name": "math",
+        "grade": "10-",
+        "date": "2026-06-18"
+    },
+    {
+        "class_name": "history",
+        "grade": "8+",
+        "date": "2026-07-23"
+    },
+    {
+        "class_name": "math",
+        "grade": "10",
+        "date": "2026-07-10"
+    }
+]
