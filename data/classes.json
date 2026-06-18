@@ -1,0 +1,62 @@
+[
+    {
+        "class_name": "biology",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "chemistry",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "english",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "finnish",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "geography",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "german",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "health-education",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "history",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "math",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "physics",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "religion",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    },
+    {
+        "class_name": "swedish",
+        "class_teacher": "nobody",
+        "class_room_number": "A000"
+    }
+]
