@@ -93,7 +93,16 @@ def grade(command):
                 print(f"class: {entry["class_name"]} | grade: {entry["grade"]} | date: {entry["date"]}")
                 
     
-
+def classes(command):
+    if command[1] == "help":
+        print(""" Help text goes Here""")
+    
+    elif command[1] == "list":
+        with open("data/classes.json", "r") as f:
+            data = json.load(f)
+        
+        for subject in data:
+            print(subject["class_name"])
 
 
 
@@ -113,3 +122,5 @@ while running:
         running = False
     elif parts[0] == "grade":
         grade(parts)
+    elif parts[0] == "class":
+        classes(parts)
