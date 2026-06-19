@@ -59,4 +59,20 @@ def reset_configuration():
         json.dump(subjects, f, indent=4)
 
 if __name__ == "__main__":
-    generate_classes()
+    operation = int(input("""what do you want to do?
+                          1. generate default configuration
+                          2. generate custom configuration
+                          3. generate empty confuguration
+                          enter number of operation: """))
+    
+    if operation == 1:
+        generate_classes()
+        print("succesfully generated defaults")
+    elif operation == 2:
+        generate_classes_custom()
+        print("succesfully generated custom")
+    elif operation == 3:
+        reset_configuration()
+        print("succesfully generated empty")
+    else:
+        print("invalid operation")
