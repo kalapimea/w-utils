@@ -1,4 +1,4 @@
-from scripts.generators.classes_gen import *
+from scripts.helpers.classes_gen import *
 
 def classes(command):
     if command[1] == "help":
