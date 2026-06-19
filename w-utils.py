@@ -1,4 +1,6 @@
 import json
+from data.classes_gen import generate_classes
+
 
 def grade(command):
     if command[1] == "help":
@@ -93,9 +95,11 @@ def grade(command):
                 print(f"class: {entry["class_name"]} | grade: {entry["grade"]} | date: {entry["date"]}")
                 
     
+
 def classes(command):
     if command[1] == "help":
-        print(""" Help text goes Here""")
+        print("""help> use 'class list' to list all classes,
+              if nothing shows up, use 'class generate' to generate default configuration of classes to classes.json""")
     
     elif command[1] == "list":
         with open("data/classes.json", "r") as f:
@@ -103,6 +107,9 @@ def classes(command):
         
         for subject in data:
             print(subject["class_name"])
+    
+    elif command[1] == "generate":
+        generate_classes()
 
 
 
