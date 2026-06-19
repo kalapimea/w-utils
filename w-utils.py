@@ -103,7 +103,7 @@ def classes(command):
               or 'class generate custom' for a customied generation
               or 'class generate reset' to empty out classes.json (you do not need to reset to add classes)
               
-              use 'class <class> <info>' to see information about class.
+              use 'class info <class> <info>' to see information about class.
               
               <class> takes any of the classes seen in  'class list' as input
               <info> takes one of the following to show about <class>:
@@ -124,9 +124,27 @@ def classes(command):
             elif command[2] == "custom":
                 generate_classes_custom()
             elif command[2] == "empty":
-                reset_configuration()            
+                reset_configuration()  
 
+    elif command[1] == "info":
+        filter_class = command[2]
+        info = command[3]
 
+        with open("data/classes.json", "r") as f:
+            subjects = json.load(f)
+
+            for subject in subjects:
+                if subject["class_name"] == filter_class:
+                    if info == "teacher":
+                        print(f"Teacher of {subject["class_name"]} is {subject["class_teacher"]}")
+                    elif info == "room":
+                        print(f"Room number of {subject["class_name"]} is {subject["class_room_number"]}")
+                    else:
+                        print("invalid info flag of {info}")
+                    
+                    break
+            else:
+                print(f"No such class '{filter_class}' found")
 
 
 
