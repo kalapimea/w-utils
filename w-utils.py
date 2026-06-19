@@ -1,5 +1,5 @@
 import json
-from data.classes_gen import generate_classes
+from data.classes_gen import *
 
 
 def grade(command):
@@ -99,7 +99,16 @@ def grade(command):
 def classes(command):
     if command[1] == "help":
         print("""help> use 'class list' to list all classes,
-              if nothing shows up, use 'class generate' to generate default configuration of classes to classes.json""")
+              if nothing shows up, use 'class generate default' to generate default configuration of classes to classes.json
+              or 'class generate custom' for a customied generation
+              or 'class generate reset' to empty out classes.json (you do not need to reset to add classes)
+              
+              use 'class <class> <info>' to see information about class.
+              
+              <class> takes any of the classes seen in  'class list' as input
+              <info> takes one of the following to show about <class>:
+                teacher        shows name of teacher
+                room           shows room number of class""")
     
     elif command[1] == "list":
         with open("data/classes.json", "r") as f:
@@ -109,7 +118,13 @@ def classes(command):
             print(subject["class_name"])
     
     elif command[1] == "generate":
-        generate_classes()
+        if len(command) > 2:
+            if command[2] == "default":
+                generate_classes()
+            elif command[2] == "custom":
+                generate_classes_custom()
+            elif command[2] == "empty":
+                reset_configuration()            
 
 
 
