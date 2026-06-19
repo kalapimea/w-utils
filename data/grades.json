@@ -18,5 +18,15 @@
         "class_name": "math",
         "grade": "10",
         "date": "2026-07-10"
+    },
+    {
+        "class_name": "math",
+        "grade": "10+",
+        "date": "2026-06-19"
+    },
+    {
+        "class_name": "math",
+        "grade": "2026-06-19",
+        "date": "12:35"
     }
 ]

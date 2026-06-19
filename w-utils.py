@@ -1,10 +1,10 @@
 from scripts.grades import *
 from scripts.classes import *    
+from scripts.exams import *
 
-
-#Main loop
 print("W-utils> Welcome to W-utils. \nType 'help' for a list of commands and '<command> help' for help with a command")
 running = True
+#main loop
 while running:
     command = input("W-utils> ").lower()
     parts = command.split()
@@ -17,3 +17,5 @@ while running:
         grade(parts)
     elif parts[0] == "class":
         classes(parts)
+    elif parts[0] == "exam":
+        exams(parts)
