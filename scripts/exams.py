@@ -5,8 +5,9 @@ from scripts.helpers.exam_update import *
 def exams(command):
     if command[1] == "help":
         print("""exam add <class> <yyyy-mm-dd> <hh:mm>
-              exam show [yyyy-mm-dd]
-              exam update""")
+              exam show [--flag] [filter]
+              exam update
+              flags --status/-s --date/-d""")
     
     elif command[1] == "add":
         if len(command) >= 5:
@@ -35,11 +36,18 @@ def exams(command):
         with open("data/exams.json", "r") as f:
             exams = json.load(f)
 
+        date_filter = ""
+        status_filter = ""
+        
         if len(command) > 2:
-            date_filter = command[2]
+            if command[2] == "--date" or command[2] == "-d":
+                date_filter = command[3]
+            elif command[2] == "--status" or "-s":
+                status_filter = command[3]
+
 
             for exam in exams:
-                if exam["exam_date"] == date_filter:
+                if exam["exam_date"] == date_filter or exam["exam_status"] == status_filter:
                     print(f"{exam["exam_class"]} exam on {exam["exam_date"]} ({convert_to_weekday(exam["exam_date"])}) at {exam["exam_time"]}")
         else:
             for exam in exams:
