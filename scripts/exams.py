@@ -12,6 +12,7 @@ def exams(command):
             exam_class = command[2]
             exam_date = command[3]
             exam_time = command[4]
+            
 
             
             with open("data/exams.json", "r") as f:
@@ -20,7 +21,8 @@ def exams(command):
             exam_entry = {
                 "exam_class": exam_class,
                 "exam_date": exam_date,
-                "exam_time": exam_time
+                "exam_time": exam_time,
+                "exam_status": "undefined"
             }
             
             exams.append(exam_entry)
