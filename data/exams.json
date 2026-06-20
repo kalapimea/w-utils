@@ -3,6 +3,24 @@
         "exam_class": "math",
         "exam_date": "2026-06-20",
         "exam_time": "12:35",
-        "exam_status": "undefined"
+        "exam_status": "today"
+    },
+    {
+        "exam_class": "history",
+        "exam_date": "2026-07-23",
+        "exam_time": "13:25",
+        "exam_status": "far away"
+    },
+    {
+        "exam_class": "religion",
+        "exam_date": "2027-08-13",
+        "exam_time": "16:15",
+        "exam_status": "far away"
+    },
+    {
+        "exam_class": "chemistry",
+        "exam_date": "2026-06-19",
+        "exam_time": "13:15",
+        "exam_status": "expired"
     }
 ]

@@ -1,11 +1,12 @@
 import json
 from scripts.helpers.dates import *
-
+from scripts.helpers.exam_update import *
 
 def exams(command):
     if command[1] == "help":
         print("""exam add <class> <yyyy-mm-dd> <hh:mm>
-              exam show [yyyy-mm-dd]""")
+              exam show [yyyy-mm-dd]
+              exam update""")
     
     elif command[1] == "add":
         if len(command) >= 5:
@@ -43,3 +44,6 @@ def exams(command):
         else:
             for exam in exams:
                 print(f"{exam["exam_class"]} on {exam["exam_date"]} ({convert_to_weekday(exam["exam_date"])}) at {exam["exam_time"]}")
+
+    elif command[1] == "update":
+        update_exams()
